@@ -21,12 +21,22 @@ public class Main {
 		studentManager.joinCourse(student,course1);
 		studentManager.attendanceControl(student);
 		studentManager.comment(student);
+		studentManager.add(student);
+		studentManager.delete(student);
+		studentManager.update(student);
+		studentManager.login(student);
+		studentManager.logout(student);
 		System.out.println("*********************************");
 
 		
 		InstructorManager instructorManager = new InstructorManager();
 		instructorManager.addCourse(instructor);
 		instructorManager.addHomework(instructor);	
+		instructorManager.add(instructor);
+		instructorManager.delete(instructor);
+		instructorManager.update(instructor);
+		instructorManager.login(instructor);
+		instructorManager.logout(instructor);
 
 	}
 
