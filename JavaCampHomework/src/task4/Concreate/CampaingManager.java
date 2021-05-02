@@ -1,11 +1,12 @@
 package task4.Concreate;
 
+import task4.Abstract.CampaingService;
 import task4.Entities.Campaing;
 import task4.Entities.Game;
 
-public class CampaingManager {
+public class CampaingManager implements CampaingService {
 	
-	Campaing[] campaings;
+	Campaing[] campaings;	
 	
 	public CampaingManager(Campaing[] campaings) {
 		this.campaings = campaings;
