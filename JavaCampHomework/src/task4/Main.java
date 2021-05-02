@@ -28,6 +28,7 @@ public class Main {
 		
 		GameManager gameManager = new GameManager(new CampaingManager(campaings));
 		gameManager.buy(game, gamer,"A1");
+		gameManager.buy(game, gamer);
 		System.out.println("------------------------------------------------");
 		
 		CampaingManager campaingManager = new CampaingManager(campaings);

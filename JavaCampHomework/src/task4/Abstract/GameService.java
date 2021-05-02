@@ -6,5 +6,6 @@ import task4.Entities.Gamer;
 public interface GameService {
 	
 	void buy(Game game,Gamer gamer,String code);	
+	public void buy(Game game, Gamer gamer);
 
 }

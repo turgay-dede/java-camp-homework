@@ -21,5 +21,10 @@ public class GameManager implements GameService {
 		System.out.println(gamer.getFirstName() +" " + gamer.getLastName() + " adli oyuncu "+game.getGameName() +" oyununu satin aldi");
 		
 	}
+	@Override
+	public void buy(Game game, Gamer gamer) {		
+		System.out.println(gamer.getFirstName() +" " + gamer.getLastName() + " adli oyuncu "+game.getGameName() +" oyununu "+game.getPrice() +" tl'ye satin aldi");
+		
+	}
 	
 }
