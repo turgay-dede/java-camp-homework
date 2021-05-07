@@ -1,6 +1,10 @@
 package task5.eTradeRegisterAndLogin.UI;
 
 
+import task5.eTradeRegisterAndLogin.business.abstracts.AuthService;
+import task5.eTradeRegisterAndLogin.business.abstracts.MailService;
+import task5.eTradeRegisterAndLogin.business.abstracts.UserService;
+import task5.eTradeRegisterAndLogin.business.abstracts.UserValidationService;
 import task5.eTradeRegisterAndLogin.business.concreates.AuthManager;
 import task5.eTradeRegisterAndLogin.business.concreates.MailManager;
 import task5.eTradeRegisterAndLogin.business.concreates.UserManager;
@@ -14,17 +18,17 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
-		UserValidationManager userValidationManager = new  UserValidationManager();
+		UserValidationService userValidationService = new  UserValidationManager();
 		InMemoryUserDao inMemoryUserDao = new InMemoryUserDao();
-		MailManager mailManager = new MailManager();
+		MailService mailService = new MailManager();
 		
-		User user1 = new User(6, "Engin", "Demirog", "engin@hotmail.com", "",false);
+		//User user1 = new User(6, "Engin", "Demirog", "engin@hotmail.com", "",false);
 				
-		UserManager userManager = new UserManager(inMemoryUserDao,userValidationManager);
+		UserService userService = new UserManager(inMemoryUserDao,userValidationService);
 		
-		AuthManager authManager = new AuthManager(userValidationManager,userManager,mailManager);
-		//authManager.register(user1);
-		authManager.login("turgay@hotmail.com","12345t");
+		AuthService authService = new AuthManager(userValidationService,userService,mailService);
+		//authService.register(user1);
+		authService.login("turgay@hotmail.com","12345t");
 		
 
 	}
